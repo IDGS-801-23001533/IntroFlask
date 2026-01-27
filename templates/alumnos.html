@@ -1,0 +1,17 @@
+
+{% extends "layout.html"%}
+
+{% block content %}
+{% import "_macros.html" as macros %}
+<h1>Alumnos</h1>
+
+<form action="/alumnos" method="post">
+{{macros.datos("nombre","Ingresa nombre")}}
+{{macros.datos("apellido","Ingresa apellido")}}
+{{macros.datos("edad","Ingresa edad","number")}}
+{{macros.datos("correo","Ingresa correo","email")}}
+{{macros.datos("password","Ingresa contraseña","password")}}
+
+</form>
+
+{% endblock %}
